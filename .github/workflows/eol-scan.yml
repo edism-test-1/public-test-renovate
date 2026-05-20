@@ -10,6 +10,10 @@ jobs:
   eol-scan:
     runs-on: ubuntu-latest
 
+    permissions:
+      contents: read
+      packages: read
+
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
