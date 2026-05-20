@@ -1,0 +1,5 @@
+# Python dependencies
+# Add your project dependencies here
+# Example format:
+# package-name==1.0.0
+# another-package>=2.0.0
