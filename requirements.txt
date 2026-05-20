@@ -1,5 +1,5 @@
 # Python dependencies
 django==6.0.5
 flask==1.1.4
-fastapi==0.65.0
+fastapi==0.136.1
 urllib3==2.6.0
