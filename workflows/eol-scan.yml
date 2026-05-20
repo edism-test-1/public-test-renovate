@@ -16,3 +16,19 @@ jobs:
 
       - name: Run eol-check
         uses: docker://ghcr.io/mheap/eol-check:latest
+
+      - name: Run eol-check
+        uses: docker://ghcr.io/mheap/eol-check:latest
+        id: eol-check
+
+      - name: Comment on PR with results
+        if: github.event_name == 'pull_request' && failure()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            github.rest.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: '❌ EOL check failed: Some dependencies are end-of-life'
+            })
