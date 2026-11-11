@@ -3,5 +3,5 @@ django==6.0.5
 flask==1.1.4
 fastapi==0.136.1
 urllib3==2.6.0
-Jinja2==3.0.0a1
+Jinja2==3.1.6
 requests==0.3.1
